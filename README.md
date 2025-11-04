@@ -13,3 +13,9 @@ and engage with the chatbot in simulated dialogues. The design prioritizes clari
 
 I was responsible for designing the UI, implementing interactive components, and integrating the chatbot via API, ensuring seamless communication between frontend and backend. 
 This project demonstrates my ability to create engaging frontend experiences while connecting to AI-powered services.
+
+How to Run the Django Backend
+
+The backend of this project is built with Django to manage lessons, user progress, and chatbot interactions. Follow these steps to run the project locally:
+Clone the repository
+git clone https://github.com/<username>/<repo-name>.git
