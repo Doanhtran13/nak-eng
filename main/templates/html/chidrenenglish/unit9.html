@@ -1,0 +1,1032 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'views/header.html' %}
+  <link href="{% static 'css/childrenenglish/unit1.css' %}" rel="stylesheet" />
+  <body>
+    {% include 'views/navbar.html' %}
+    <!-- banner -->
+    <div class="container">
+      <img
+        src="{%static 'img/img/bannerr2.png' %}"
+        class="img-fluid banner1"
+        alt="..."
+      />
+      <img
+        src="{%static 'img/img/bannerr3.png' %}"
+        class="img-fluid banner2"
+        alt="..."
+      />
+    </div>
+    <!-- phan main -->
+    <div class="container my-4">
+      <!-- Section 1: Hello -->
+      <div class="container mt-5">
+        <!-- Thanh phân chia -->
+        <div
+          class="d-flex justify-content-between align-items-center"
+          style="margin-bottom: 20px"
+        >
+          <div class="border-top border-danger" style="width: 45%"></div>
+          <h3 class="text-center text-danger" style="font-weight: bold">
+            Unit 9: This is my family
+          </h3>
+          <div class="border-top border-danger" style="width: 45%"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingHello">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHello"
+              aria-expanded="true"
+              aria-controls="collapseHello"
+            >
+              Part 1: Vocabulary
+            </button>
+          </h3>
+        </div>
+        <div id="collapseHello" class="collapse" aria-labelledby="headingHello">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="false"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{%static 'img/img/u91.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 1"
+                  style="max-height: 706px"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio1').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio1"
+                    src="{%static 'audio/relative.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u92.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 2"
+                  style="max-height: 706px"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio2').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio2"
+                    src="{%static 'audio/father.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u93.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio3').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio3"
+                    src="{%static 'audio/mother.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u94.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio4').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio4"
+                    src="{%static 'audio/brother.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u95.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio5').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio5"
+                    src="{%static 'audio/sister.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u96.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio6').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio6"
+                    src="{%static 'audio/grandfather.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u97.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio7').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio7"
+                    src="{%static 'audio/grandmother.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u98.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio8').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio8"
+                    src="{%static 'audio/uncle.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u99.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio9').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio9"
+                    src="{%static 'audio/aunt.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u910.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio10').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio10"
+                    src="{%static 'audio/son.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u911.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio11').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio11"
+                    src="{%static 'audio/daughter.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u912.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio12').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio12"
+                    src="{%static 'audio/parent.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u913.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio13').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio13"
+                    src="{%static 'audio/child.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u914.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio14').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio14"
+                    src="{%static 'audio/children.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u915.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio15').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio15"
+                    src="{%static 'audio/husband.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u916.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio16').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio16"
+                    src="{%static 'audio/wife.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u917.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio17').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio17"
+                    src="{%static 'audio/family.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u918.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio18').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio18"
+                    src="{%static 'audio/baby.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+            </div>
+            <!-- Các nút điều hướng -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Grammar -->
+      <div class="card mt-3">
+        <div class="card-header" id="headingGrammar">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseGrammar"
+              aria-expanded="true"
+              aria-controls="collapseGrammar"
+            >
+              Part 2: Grammar
+            </button>
+          </h3>
+        </div>
+        <div
+          id="collapseGrammar"
+          class="collapse"
+          aria-labelledby="headingGrammar"
+        >
+          <div class="card mb-3" style="margin: 15px; border: 2px solid black">
+            <img
+              src="{%static 'img/img/u9grammar.png' %}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-body1">
+                <h5 class="card-title" style="text-align: start">
+                  This is my family
+                </h5>
+              </div>
+              <style>
+                p {
+                  font-family: "Roboto", sans-serif;
+                }
+              </style>
+              <p>
+                <strong>Ngữ pháp: How Many / How Much (Bao nhiêu)</strong>
+                <br />
+                Chào các bạn! Hôm nay, chúng ta sẽ học cách sử dụng How many và
+                How much để hỏi về số lượng hoặc mức độ của sự vật, sự việc, và
+                chúng ta sẽ liên hệ với gia đình để thực hành. <br />
+                <strong>1. How many</strong> <br />
+                – Dùng để hỏi về số lượng của danh từ đếm được (nói về những thứ
+                có thể đếm được như người, vật, đồ vật, v.v.). <br />
+                Cấu trúc: How many + danh từ đếm được số nhiều? <br />
+                Ví dụ: How many people are in your family? (Gia đình bạn có bao
+                nhiêu người?) <br />
+                Ví dụ: How many brothers do you have? (Bạn có bao nhiêu anh
+                trai?) <br />
+                <strong>2. How much </strong> <br />
+                – Dùng để hỏi về số lượng hoặc mức độ của danh từ không đếm được
+                (nói về những thứ không thể đếm được như nước, tiền, thời gian,
+                v.v.). <br />
+                Cấu trúc: How much + danh từ không đếm được? <br />
+                Ví dụ: How much time do you spend with your family? (Bạn dành
+                bao nhiêu thời gian cho gia đình?) <br />
+                Ví dụ: How much money do you spend on groceries each month? (Bạn
+                chi bao nhiêu tiền cho việc mua sắm hàng tháng?) <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Minigame -->
+      <div class="card mt-3">
+        <div class="card-header" id="headinggame">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsegame"
+              aria-expanded="true"
+              aria-controls="collapsegame"
+            >
+              Part 3: Game
+            </button>
+          </h3>
+        </div>
+        <div
+          id="collapsegame"
+          class="collapse show"
+          aria-labelledby="headinggame"
+        >
+          <div
+            id="quiz-wrapper"
+            style="
+              background: linear-gradient(to bottom, #aee1f9, #e1c4f9);
+              padding: 40px;
+              border-radius: 12px;
+              width: 100%;
+              height: 50%;
+              font-family: Arial;
+            "
+          >
+            <div
+              id="quiz-container"
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              "
+            ></div>
+          </div>
+
+          <script>
+            const questions = [
+              {
+                question: "1. Relatives nghĩa là gì?",
+                options: ["Người thân", "Bố mẹ", "Ông bà", "Cô chú"],
+                correct: 0,
+              },
+              {
+                question: "2. Grandfather nghĩa là gì?",
+                options: ["Bà", "Ông", "Bố", "Chú"],
+                correct: 1,
+              },
+              {
+                question: "3. Brother nghĩa là gì?",
+                options: ["Anh/em", "Cô", "Chú", "Bố"],
+                correct: 0,
+              },
+              {
+                question: "4. Aunt nghĩa là gì?",
+                options: ["Chú", "Cô", "Bác", "Cậu"],
+                correct: 1,
+              },
+              {
+                question: "5. Daughter nghĩa là gì?",
+                options: ["Con trai", "Con gái", "Ông", "Bà"],
+                correct: 1,
+              },
+            ];
+
+            let current = 0,
+              score = 0,
+              timer = null;
+            const container = document.getElementById("quiz-container");
+
+            function showStartPage() {
+              container.innerHTML = `
+            <div style="text-align:center;">
+              <h2>🧠 Trò chơi Quiz</h2>
+              <p>Trả lời 10 câu hỏi trong thời gian giới hạn!</p>
+              <button onclick="loadQuestion()" style="padding: 12px 24px; font-size: 16px; border:none; border-radius:6px; background:#4caf50; color:white; cursor:pointer;">Bắt đầu</button>
+            </div>
+          `;
+            }
+
+            function loadQuestion() {
+              if (current >= questions.length) {
+                container.innerHTML = `
+              <div style="text-align:center;">
+                <h2>🎉 Bạn đã hoàn thành!</h2>
+                <p>Điểm số: <strong>${score} / ${questions.length}</strong></p>
+              </div>
+            `;
+                return;
+              }
+
+              const q = questions[current];
+              container.innerHTML = `
+            <div style="margin-bottom: 10px;"><strong>Câu ${current + 1}/${
+                questions.length
+              }:</strong> ${q.question}</div>
+            <div id="options">
+              ${q.options
+                .map(
+                  (opt, i) => `
+                <button onclick="checkAnswer(${i})" style="width:100%;padding:12px;margin:6px 0;border:none;border-radius:6px;background:#e0e0e0;font-size:16px;cursor:pointer;">${opt}</button>
+              `
+                )
+                .join("")}
+            </div>
+            <div id="result" style="margin-top:10px;font-weight:bold;"></div>
+            <div style="margin-top:10px;">⏱ Thời gian còn lại: <span id="timer" style="color:#d32f2f;font-weight:bold;">30</span> giây</div>
+          `;
+
+              let timeLeft = 30;
+              document.getElementById("timer").textContent = timeLeft;
+              timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = timeLeft;
+                if (timeLeft === 0) {
+                  clearInterval(timer);
+                  showResult(false, q.correct);
+                }
+              }, 1000);
+            }
+
+            function checkAnswer(selected) {
+              clearInterval(timer);
+              const q = questions[current];
+              const isCorrect = selected === q.correct;
+              if (isCorrect) score++;
+              showResult(isCorrect, q.correct);
+            }
+
+            function showResult(isCorrect, correctIndex) {
+              const resultDiv = document.getElementById("result");
+              resultDiv.textContent = isCorrect
+                ? "✅ Chính xác!"
+                : `❌ Sai! Đáp án đúng: ${questions[current].options[correctIndex]}`;
+              resultDiv.style.color = isCorrect ? "#388e3c" : "#d32f2f";
+
+              const buttons = document.querySelectorAll("#options button");
+              buttons.forEach((btn, index) => {
+                btn.disabled = true;
+                btn.style.background =
+                  index === correctIndex ? "#c8e6c9" : "#ffcdd2";
+              });
+
+              setTimeout(() => {
+                current++;
+                loadQuestion();
+              }, 2500);
+            }
+
+            showStartPage();
+          </script>
+        </div>
+      </div>
+      <a href="/Children_English1"
+        ><button
+          type="button"
+          class="btn btn-outline-dark"
+          style="
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+            font-family: 'Roboto', sans-serif;
+          "
+        >
+          <strong>Quay lại danh sách bài học</strong>
+        </button></a
+      >
+    </div>
+
+    <!-- Link to Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showContent(id) {
+        // Hide all content divs
+        const contentDivs = document.querySelectorAll(".hidden");
+        contentDivs.forEach((div) => div.classList.remove("active"));
+
+        // Show the clicked content
+        const selectedDiv = document.getElementById(id);
+        selectedDiv.classList.add("active");
+      }
+    </script>
+    <script>
+      function playSound(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play(); // Play the audio when the button is clicked
+      }
+    </script>
+    {% include 'views/footer.html' %}
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f7fa;
+  }
+
+  /* Container cho chatbot */
+  .chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+  }
+
+  /* Nút chatbot */
+  .chatbot-button {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 28px;
+    animation: pulse 2s infinite;
+  }
+
+  .chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Hiệu ứng pulse */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(234, 116, 225, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+
+  /* Khung chat */
+  .chatbot-window {
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    overflow: hidden;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .chatbot-container.active .chatbot-window {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Header khung chat */
+  .chatbot-header {
+    font-family: "Honk", sans-serif;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  /* Nội dung khung chat */
+  .chatbot-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Tin nhắn */
+  .message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 75%;
+    line-height: 1.4;
+    animation: slideIn 0.3s ease;
+    white-space: pre-wrap; /* Hỗ trợ xuống dòng */
+  }
+
+  .message.user {
+    background: pink;
+    color: black;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+  }
+
+  .message.bot {
+    background: #e9ecef;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+  }
+
+  /* Hiệu ứng tin nhắn xuất hiện */
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Footer chứa input */
+  .chatbot-footer {
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .chatbot-footer input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+
+  .chatbot-footer input:focus {
+    border-color: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-footer button {
+    padding: 12px;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+
+  .chatbot-footer button:hover {
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-button img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .chatbot-window {
+      width: 90vw;
+      height: 80vh;
+      bottom: 80px;
+      right: 10px;
+    }
+
+    .chatbot-button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+  }
+</style>
+<div class="chatbot-container">
+  <div class="chatbot-button">
+    <img
+      src="{% static 'img/img/479374583_2408177479537942_8679824344704556172_n (1).png' %}"
+      alt="logooo"
+      class="loggonak"
+      style=""
+    />
+  </div>
+  <div class="chatbot-window">
+    <div class="chatbot-header">NAK ENGLISH</div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="message bot" style="white-space: normal">
+        <strong>Xin chào! Cùng học tập với NAK ENGLISH nhé 🙂</strong>
+      </div>
+    </div>
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Nhập câu hoặc câu hỏi..."
+      />
+      <button onclick="sendMessage()">📤</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_KEY = "AIzaSyDoBLRfWtl8RgD9bP_0YLocv1Ek-joFt1o";
+  const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+  const SYSTEM_PROMPT =
+    "Bạn là một giáo viên tiếng Anh chuyên nghiệp. Nhiệm vụ của bạn là giúp người dùng học tiếng Anh bằng cách giải thích từ vựng, ngữ pháp, sửa lỗi câu, cung cấp ví dụ và trả lời các câu hỏi liên quan đến tiếng Anh. Phản hồi của bạn phụ thuộc vào việc nếu người dùng nói tiếng việt hãy phản hồi tiếng việt và nói tiếng anh khi người dùng nói tiếng anh, không chấp nhận các ngôn ngữ khác, dễ hiểu và thân thiện. Mỗi ý chính hoặc bước giải thích phải được trình bày trên một dòng mới, sử dụng gạch đầu dòng ('-') hoặc xuống dòng để đảm bảo rõ ràng và dễ đọc.";
+
+  document.querySelector(".chatbot-button").addEventListener("click", () => {
+    document.querySelector(".chatbot-container").classList.toggle("active");
+  });
+
+  async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Hiển thị tin nhắn người dùng
+    const chatBody = document.getElementById("chatbot-body");
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.textContent = message;
+    chatBody.appendChild(userMessage);
+    input.value = "";
+
+    // Cuộn xuống cuối
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    try {
+      // Gửi yêu cầu đến Gemini API
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: SYSTEM_PROMPT }, { text: message }],
+            },
+          ],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Lỗi khi gọi Gemini API");
+      }
+
+      const data = await response.json();
+      const botReply = data.candidates[0].content.parts[0].text;
+
+      // Hiển thị phản hồi của bot
+      const botMessage = document.createElement("div");
+      botMessage.className = "message bot";
+      botMessage.textContent = botReply;
+      chatBody.appendChild(botMessage);
+
+      // Cuộn xuống cuối
+      chatBody.scrollTop = chatBody.scrollHeight;
+    } catch (error) {
+      const errorMessage = document.createElement("div");
+      errorMessage.className = "message bot";
+      errorMessage.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
+      chatBody.appendChild(errorMessage);
+      console.error(error);
+    }
+  }
+
+  // Gửi tin nhắn khi nhấn Enter
+  document.getElementById("user-input").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
+</script>

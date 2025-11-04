@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --card-bg: #ffffff;
+        --input-bg: #f8f9fa;
+        --primary: #2575fc;
+        --primary-hover: #1a5edc;
+      }
+
+
+      body.dark-mode {
+        --bg-color: #1e1e2f;
+        --text-color: #ffffff;
+        --card-bg: #2c2c3e;
+        --input-bg: #3a3a4d;
+      }
+
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", sans-serif;
+        transition: background-color 0.4s ease, color 0.4s ease;
+        position: relative;
+      }
+
+
+      .login-card {
+        background-color: var(--card-bg);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        transition: background-color 0.4s ease;
+      }
+
+
+      .form-control {
+        border-radius: 10px;
+        background-color: var(--input-bg);
+        color: var(--text-color);
+        border: 1px solid #ccc;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+
+      .form-control::placeholder {
+        color: #888;
+      }
+
+
+      .btn-primary {
+        border-radius: 10px;
+        background-color: var(--primary);
+        border: none;
+      }
+
+
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+      }
+
+
+      .mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-color);
+        transition: color 0.3s ease;
+      }
+
+
+      .text-muted {
+        font-size: 0.9rem;
+      }
+
+
+      .icon-sun,
+      .icon-moon {
+        display: none;
+        transition: opacity 0.3s ease;
+      }
+
+
+      .light-mode .icon-sun {
+        display: inline;
+      }
+
+
+      .dark-mode .icon-moon {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <button
+      class="mode-toggle"
+      onclick="toggleMode()"
+      aria-label="Chuyển chế độ sáng/tối"
+    >
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon">🌙</span>
+    </button>
+
+    {% block register %}
+    <div class="login-card">
+      <h3 class="text-center mb-4">Đăng Nhập</h3>
+      <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label class="form-label">Tên đăng nhập</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            name="email"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Họ</label>
+          <input
+            type="text"
+            class="form-control"
+            name="first_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Tên</label>
+          <input
+            type="text"
+            class="form-control"
+            name="last_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mật khẩu</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password1"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Nhập lại mật khẩu</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password2"
+          />
+        </div>
+
+
+        
+        <button type="submit" class="btn btn-primary w-100">Đăng Ký</button>
+        <a href="{% url 'login' %}" class="btn btn-primary w-100" style="margin-top: 10px; height: 36px">Đăng nhập</a>
+      </form>
+      </p>
+    </div>
+    {% endblock register %}
+
+
+    <script>
+      function toggleMode() {
+        const body = document.body;
+        const isDark = body.classList.contains("dark-mode");
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("light-mode");
+        localStorage.setItem("mode", isDark ? "light" : "dark");
+      }
+
+
+      window.onload = () => {
+        const savedMode = localStorage.getItem("mode");
+        if (savedMode === "dark") {
+          document.body.classList.add("dark-mode");
+          document.body.classList.remove("light-mode");
+        } else {
+          document.body.classList.add("light-mode");
+        }
+      };
+    </script>
+  </body>
+</html>

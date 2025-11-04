@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  {% include 'views/header.html' %}
+
+  <body>
+    <!-- header -->
+    {% include 'views/navbar.html' %}
+    <div class="container main">
+      <div class="section">
+        <img src="{% static '/img/img/Poster-You-Can-Do-It.png' %}" alt="Vi sao ban phai hoc tieng anh">
+        <div class="section-2">
+          <h1 class="heading"><strong>Learn without limits and spread knowledge</strong> </h1>
+          <br>
+          <p class="doanvan">Khám phá những cơ hội mới với các khóa học, chứng chỉ và bằng cấp 
+            từ các trường đại học và doanh nghiệp hàng đầu. Dù bạn muốn thăng tiến trong sự nghiệp, học hỏi kỹ năng mới hay dẫn đầu trong thế giới cạnh tranh, chúng tôi luôn có tài nguyên phù hợp cho bạn. Bắt đầu hành trình của bạn ngay hôm nay!</p>
+            <br>
+            <div class="cta-group">
+              <a href="#!" class="signin"><strong>See courses</strong></a>
+              <button id="watch-video-btn" class="watch-video">
+                  <div class="icon">
+                      <img src="{% static 'img/icon/play-button.png' %}" alt="">
+                  </div>
+                  <span><strong>Watch Video</strong></span>
+              </button>
+          </div>
+          <!-- Popup video -->
+          
+
+          <!-- JavaScript -->
+          <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const videoOverlay = document.getElementById("videoOverlay"); // videoOverlay id phần nền đen
+            const videoFrame = document.getElementById("videoFrame"); // videoFrame id phần video
+            const watchVideoButton = document.getElementById("watch-video-btn"); // Đảm bảo đúng ID nút
+
+          // Khi nhấn "Watch Video", hiển thị popup & phát video
+            watchVideoButton.addEventListener("click", function () {
+            videoOverlay.style.display = "flex"; // Mở popup
+            videoFrame.play(); // Bắt đầu phát
+          });
+
+          // Khi nhấn ra ngoài popup, đóng popup & dừng video
+          videoOverlay.addEventListener("click", function (event) {
+            if (event.target === videoOverlay) {
+              videoOverlay.style.display = "none"; // Ẩn popup
+              videoFrame.pause(); // Dừng phát video
+              videoFrame.currentTime = 0; // Đưa về giây 0
+              }
+            });
+          });
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="{% static 'img/img/bannerhome.png' %}" class="img-fluid banner" alt="..." >
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+          <h2><strong>English for children</strong></h2>
+          <br>
+          <p class="doanvan">
+            Ngày nay, tiếng Anh ngày càng trở nên quan trọng nhờ những lợi ích thiết thực mà nó mang lại trong học tập, công việc và cuộc sống. Nhiều trẻ em có thể giao tiếp tiếng Anh trôi chảy ngay từ nhỏ, giúp các em tự tin hơn và mở ra nhiều cơ hội trong tương lai. Chúng tôi ở đây để đồng hành cùng con bạn, giúp các em rèn luyện kỹ năng giao tiếp tiếng Anh một cách tự nhiên và truyền cảm hứng để các em yêu thích ngôn ngữ này hơn mỗi ngày!
+          </p>
+          <br>
+          <div class="chihuong">
+            <img src="{% static 'img/icon/caimuiten.png' %}" alt="" class="arrow">
+            <a href="/Children_English" class="signin"><strong>Enjoy this course</strong></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-end">
+          <img src="{% static 'img/img/trẻconhocta.jpg' %}" alt="trẻconhocta" class="img-fluid ms-auto d-block">
+        </div>
+      </div>
+    </div>    
+      <!-- Aldult English -->
+    <div class="container text-center aldult">
+      <div class="row">
+        <div class="col">
+          <img src="{% static 'img/img/adultenglish.webp' %}" alt="Mất gốc có học được tiếng Anh ?">
+        </div>
+        <div class="col">
+          <h2><strong>Aldult's English</strong></h2>
+          <br>
+          <p class="doanvan">Bạn đang mất gốc tiếng Anh hoặc mong muốn giao tiếp tốt hơn để làm việc với đối tác, thăng tiến trong sự nghiệp? Nhưng bạn e ngại khi học tiếng Anh vì thiếu thời gian và nhiều lý do khác? Hãy tham gia ngay khóa học của chúng tôi – nơi giúp bạn học tiếng Anh dễ dàng, linh hoạt theo lịch trình của riêng mình. Đừng chần chừ, bắt đầu ngay hôm nay và đồng hành cùng chúng tôi!</p>
+          <br>
+          <div class="chihuong">
+              <img src="{% static 'img/icon/caimuiten.png' %}" alt="Mũi tên" class="arrow">
+              <a href="./Aldult_English" class="signin"><strong>Enjoy this course</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container ielts-exam">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+          <h2><strong>Ielts Exam</strong></h2>
+          <br>
+          <p class="doanvan">
+            Chúng tôi cung cấp bộ đề thi tham khảo IELTS chất lượng, bám sát cấu trúc đề thi thật, giúp bạn rèn luyện kỹ năng và làm quen với áp lực thời gian. Với hệ thống đề thi đa dạng, cập nhật thường xuyên theo xu hướng mới nhất, bạn sẽ có cơ hội thực hành hiệu quả cả bốn kỹ năng: Nghe, Nói, Đọc, Viết. Luyện tập với bộ đề của chúng tôi sẽ giúp bạn cải thiện chiến lược làm bài, nâng cao sự tự tin và sẵn sàng chinh phục kỳ thi IELTS!
+          </p>
+          <br>
+          <div class="chihuong">
+            <img src="{% static 'img/icon/caimuiten.png' %}" alt="" class="arrow">
+            

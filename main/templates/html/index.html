@@ -1,0 +1,965 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'views/header.html' %}
+  <style>
+    .carousel-item img {
+      width: 100vh;
+      max-height: 95vh;
+      object-fit: contain;
+      overflow: hidden;
+    }
+    .carousel-inner {
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-item {
+      position: relative;
+    }
+  </style>
+  <body>
+    {% include 'views/navbar.html' %}
+    <!-- header -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'img/img/bannertong1.png' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/img/bannertong2.png' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/img/bannertong3.png' %}"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- JavaScript và Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <div class="container main" style="margin-bottom: 200px">
+      <div class="section">
+        <img
+          src="{% static '/img/img/Poster-You-Can-Do-It.png' %}"
+          alt="Vi sao ban phai hoc tieng anh"
+        />
+        <div class="section-2">
+          <h1 class="heading">
+            <strong>Learn without limits and spread knowledge</strong>
+          </h1>
+          <br />
+          <p class="doanvan">
+            Khám phá những cơ hội mới với các khóa học, chứng chỉ và bằng cấp từ
+            các trường đại học và doanh nghiệp hàng đầu. Dù bạn muốn thăng tiến
+            trong sự nghiệp, học hỏi kỹ năng mới hay dẫn đầu trong thế giới cạnh
+            tranh, chúng tôi luôn có tài nguyên phù hợp cho bạn. Bắt đầu hành
+            trình của bạn ngay hôm nay!
+          </p>
+          <br />
+          <div class="cta-group">
+            <a href="#doraemon" class="signin" style="text-decoration: none"
+              ><strong>See courses</strong></a
+            >
+            <button id="watch-video-btn" class="watch-video">
+              <div class="icon">
+                <img src="{% static 'img/icon/play-button.png' %}" alt="" />
+              </div>
+              <span><strong>Watch Video</strong></span>
+            </button>
+          </div>
+          <!-- Popup video -->
+
+          <!-- JavaScript -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const videoOverlay = document.getElementById("videoOverlay"); // videoOverlay id phần nền đen
+              const videoFrame = document.getElementById("videoFrame"); // videoFrame id phần video
+              const watchVideoButton =
+                document.getElementById("watch-video-btn"); // Đảm bảo đúng ID nút
+
+              // Khi nhấn "Watch Video", hiển thị popup & phát video
+              watchVideoButton.addEventListener("click", function () {
+                videoOverlay.style.display = "flex"; // Mở popup
+                videoFrame.play(); // Bắt đầu phát
+              });
+
+              // Khi nhấn ra ngoài popup, đóng popup & dừng video
+              videoOverlay.addEventListener("click", function (event) {
+                if (event.target === videoOverlay) {
+                  videoOverlay.style.display = "none"; // Ẩn popup
+                  videoFrame.pause(); // Dừng phát video
+                  videoFrame.currentTime = 0; // Đưa về giây 0
+                }
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+          <h2 id="doraemon"><strong>English for children</strong></h2>
+          <br />
+          <p class="doanvan">
+            Ngày nay, tiếng Anh ngày càng trở nên quan trọng nhờ những lợi ích
+            thiết thực mà nó mang lại trong học tập, công việc và cuộc sống.
+            Nhiều trẻ em có thể giao tiếp tiếng Anh trôi chảy ngay từ nhỏ, giúp
+            các em tự tin hơn và mở ra nhiều cơ hội trong tương lai. Chúng tôi ở
+            đây để đồng hành cùng con bạn, giúp các em rèn luyện kỹ năng giao
+            tiếp tiếng Anh một cách tự nhiên và truyền cảm hứng để các em yêu
+            thích ngôn ngữ này hơn mỗi ngày!
+          </p>
+          <br />
+          <div class="chihuong">
+            <img
+              src="{% static 'img/icon/caimuiten.png' %}"
+              alt=""
+              class="arrow"
+            />
+            <a
+              href="/Children_English"
+              class="signin"
+              style="text-decoration: none"
+              ><strong>Enjoy this course</strong></a
+            >
+          </div>
+        </div>
+        <div class="col-md-6 text-end">
+          <img
+            src="{% static 'img/img/trẻconhocta.jpg' %}"
+            alt="trẻconhocta"
+            class="img-fluid ms-auto d-block"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Aldult English -->
+    <div class="container text-center aldult">
+      <div class="row">
+        <div class="col">
+          <img
+            src="{% static 'img/img/adultenglish.webp' %}"
+            alt="Mất gốc có học được tiếng Anh ?"
+          />
+        </div>
+        <div class="col">
+          <h2><strong>Adult's English</strong></h2>
+          <br />
+          <p class="doanvan">
+            Bạn đang mất gốc tiếng Anh hoặc mong muốn giao tiếp tốt hơn để làm
+            việc với đối tác, thăng tiến trong sự nghiệp? Nhưng bạn e ngại khi
+            học tiếng Anh vì thiếu thời gian và nhiều lý do khác? Hãy tham gia
+            ngay khóa học của chúng tôi – nơi giúp bạn học tiếng Anh dễ dàng,
+            linh hoạt theo lịch trình của riêng mình. Đừng chần chừ, bắt đầu
+            ngay hôm nay và đồng hành cùng chúng tôi!
+          </p>
+          <br />
+          <div class="chihuong">
+            <img
+              src="{% static 'img/icon/caimuiten.png' %}"
+              alt="Mũi tên"
+              class="arrow"
+            />
+            <a
+              href="/Adult_English"
+              class="signin"
+              style="text-decoration: none"
+              ><strong>Enjoy this course</strong></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container ielts-exam">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+          <h2><strong>Ielts Exam</strong></h2>
+          <br />
+          <p class="doanvan">
+            Chúng tôi cung cấp bộ đề thi tham khảo IELTS chất lượng, bám sát cấu
+            trúc đề thi thật, giúp bạn rèn luyện kỹ năng và làm quen với áp lực
+            thời gian. Với hệ thống đề thi đa dạng, cập nhật thường xuyên theo
+            xu hướng mới nhất, bạn sẽ có cơ hội thực hành hiệu quả cả bốn kỹ
+            năng: Nghe, Nói, Đọc, Viết. Luyện tập với bộ đề của chúng tôi sẽ
+            giúp bạn cải thiện chiến lược làm bài, nâng cao sự tự tin và sẵn
+            sàng chinh phục kỳ thi IELTS!
+          </p>
+          <br />
+          <div class="chihuong">
+            <img
+              src="{% static 'img/icon/caimuiten.png' %}"
+              alt=""
+              class="arrow"
+            />
+            <a
+              href="./Children_English"
+              class="signin"
+              style="text-decoration: none"
+              ><strong>Check now</strong></a
+            >
+          </div>
+        </div>
+        <div class="col-md-6 text-end">
+          <img
+            src="{% static 'img/img/ielts-exam.png' %}"
+            alt="trẻconhocta"
+            class="img-fluid ms-auto d-block"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ====== Placement Test (đánh giá trình độ) trước footer ====== -->
+    <div class="container" style="margin: 60px auto 100px auto">
+      <div id="placement-test" style="max-width: 900px; margin: 0 auto">
+        <h2 style="text-align: center">
+          <strong>Placement Test - Đánh giá trình độ</strong>
+        </h2>
+        <p style="text-align: center">
+          Làm nhanh bài test dưới đây để NAK ENGLISH gợi ý lộ trình học phù hợp.
+        </p>
+
+        <div id="placement-intro" style="text-align: center">
+          <button
+            id="placement-start"
+            style="
+              padding: 12px 24px;
+              font-size: 16px;
+              border: none;
+              border-radius: 6px;
+              background: #3498db;
+              color: white;
+              cursor: pointer;
+            "
+          >
+            Bắt đầu làm bài
+          </button>
+        </div>
+
+        <div id="placement-quiz" style="display: none">
+          <div
+            id="placement-progress"
+            style="margin: 10px 0; font-weight: 600"
+          ></div>
+          <div
+            id="placement-question"
+            style="font-size: 18px; margin: 10px 0"
+          ></div>
+          <div id="placement-options" style="display: grid; gap: 10px"></div>
+          <div style="margin-top: 16px; display: flex; gap: 10px">
+            <button
+              id="placement-next"
+              style="
+                padding: 10px 18px;
+                border: none;
+                border-radius: 6px;
+                background: #4caf50;
+                color: white;
+                cursor: pointer;
+              "
+            >
+              Câu tiếp theo ▶
+            </button>
+            <button
+              id="placement-submit"
+              style="
+                display: none;
+                padding: 10px 18px;
+                border: none;
+                border-radius: 6px;
+                background: #e67e22;
+                color: white;
+                cursor: pointer;
+              "
+            >
+              Nộp bài ✅
+            </button>
+          </div>
+          <div
+            id="placement-error"
+            style="color: #e74c3c; margin-top: 8px; display: none"
+          >
+            Vui lòng chọn một đáp án.
+          </div>
+        </div>
+
+        <div
+          id="placement-result"
+          style="display: none; text-align: center; margin-top: 16px"
+        ></div>
+      </div>
+    </div>
+
+    <!-- them anh cho dep -->
+    <!-- footer  -->
+    {% include 'views/footer.html' %}
+  </body>
+  <div class="video-popup" id="videoOverlay" style="display: none">
+    <div class="video-container">
+      <video id="videoFrame" width="100%" height="100%" controls>
+        <source
+          src="{% static 'video/videonakenglish.mp4' %}"
+          type="video/mp4"
+        />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    </div>
+  </div>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f7fa;
+  }
+
+  /* Container cho chatbot */
+  .chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+  }
+
+  /* Nút chatbot */
+  .chatbot-button {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 28px;
+    animation: pulse 2s infinite;
+  }
+
+  .chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Hiệu ứng pulse */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(234, 116, 225, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+
+  /* Khung chat */
+  .chatbot-window {
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    overflow: hidden;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Nút liên kết trong chatbot */
+  .chatbot-link-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 14px;
+    background: linear-gradient(to right, #58c46b, #3498db);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+  }
+
+  .chatbot-link-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+  }
+
+  .chatbot-container.active .chatbot-window {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Header khung chat */
+  .chatbot-header {
+    font-family: "Honk", sans-serif;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  /* Nội dung khung chat */
+  .chatbot-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Tin nhắn */
+  .message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 75%;
+    line-height: 1.4;
+    animation: slideIn 0.3s ease;
+    white-space: pre-wrap; /* Hỗ trợ xuống dòng */
+  }
+
+  .message.user {
+    background: pink;
+    color: black;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+  }
+
+  .message.bot {
+    background: #e9ecef;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+  }
+
+  /* Hiệu ứng tin nhắn xuất hiện */
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Footer chứa input */
+  .chatbot-footer {
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .chatbot-footer input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+
+  .chatbot-footer input:focus {
+    border-color: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-footer button {
+    padding: 12px;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+
+  .chatbot-footer button:hover {
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-button img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .chatbot-window {
+      width: 90vw;
+      height: 80vh;
+      bottom: 80px;
+      right: 10px;
+    }
+
+    .chatbot-button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+  }
+</style>
+<div class="chatbot-container">
+  <div class="chatbot-button">
+    <img
+      src="{% static 'img/img/479374583_2408177479537942_8679824344704556172_n (1).png' %}"
+      alt="logooo"
+      class="loggonak"
+      style=""
+    />
+  </div>
+  <div class="chatbot-window">
+    <div class="chatbot-header">NAK ENGLISH</div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="message bot" style="white-space: normal">
+        <strong>Xin chào! Cùng học tập với NAK ENGLISH nhé 🙂</strong>
+      </div>
+    </div>
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Nhập câu hoặc câu hỏi..."
+      />
+      <button onclick="sendMessage()">📤</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_KEY = "AIzaSyCWS6sP5S9ij4mOK-xnq6s8piEnFLsKz-g";
+  const API_URL =
+    "generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+
+  const SYSTEM_PROMPT = `Hãy đóng vai là một giáo viên tiếng Anh chuyên nghiệp, thân thiện và kiên nhẫn, với nhiệm vụ chính là giúp tôi học tiếng Anh. Khi tôi đưa ra một từ vựng (hoặc hỏi nghĩa của một từ), bạn phải ngay lập tức giải thích rõ ràng từ loại, nghĩa tiếng Việt của nó, và cung cấp một vài câu ví dụ tiếng Anh để minh họa cách dùng. Trong trường hợp tôi đưa ra một câu tiếng Anh hoàn chỉnh, bạn phải phân tích ngữ pháp của câu đó. Nếu câu có lỗi sai, bạn cần chỉ rõ lỗi, giải thích tại sao nó sai (về thì, giới từ, cấu trúc, v.v.), và cung cấp phiên bản đã được sửa chữa chính xác. Nếu câu đã hoàn toàn đúng ngữ pháp, bạn chỉ cần xác nhận rằng câu đó đúng (ví dụ: "Câu này đúng! 👍") và bỏ qua, không cần phân tích gì thêm. Hãy luôn giữ giọng điệu khuyến khích và chỉ tập trung vào việc giảng dạy tiếng Anh. Hãy bắt đầu.`;
+
+  document.querySelector(".chatbot-button").addEventListener("click", () => {
+    document.querySelector(".chatbot-container").classList.toggle("active");
+    // Khi mở chatbot, tự động tải khuyến nghị gần nhất (chỉ 1 lần mỗi lần mở)
+    const container = document.querySelector(".chatbot-container");
+    const justOpened = container.classList.contains("active");
+    if (justOpened) {
+      fetchLatestRecommendation();
+    }
+  });
+
+  async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Hiển thị tin nhắn người dùng
+    const chatBody = document.getElementById("chatbot-body");
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.textContent = message;
+    chatBody.appendChild(userMessage);
+    input.value = "";
+
+    // Cuộn xuống cuối
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    try {
+      console.log("Gửi request đến Gemini API:", message);
+
+      // Gửi yêu cầu đến Gemini API
+      const response = await fetch("/api/generate/", {
+        headers: {
+          app_id: "YOUR_APP_ID", // Cần thêm app_id cho Oxford API
+          app_key: API_KEY,
+        },
+      });
+
+      console.log("Response status:", response.status);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(
+          `Lỗi khi gọi Gemini API: ${response.status} - ${errorText}`
+        );
+      }
+
+      const responseText = await response.text();
+      console.log("Raw response:", responseText.substring(0, 200));
+
+      let data;
+      try {
+        data = JSON.parse(responseText);
+        console.log("Parsed data:", data);
+      } catch (parseError) {
+        throw new Error(
+          `Không thể parse JSON: ${responseText.substring(0, 100)}...`
+        );
+      }
+
+      // Kiểm tra response format an toàn hơn
+      if (!data.candidates || data.candidates.length === 0) {
+        throw new Error(
+          `Không có candidates trong response: ${JSON.stringify(data)}`
+        );
+      }
+
+      const candidate = data.candidates[0];
+      if (
+        !candidate ||
+        !candidate.content ||
+        !candidate.content.parts ||
+        candidate.content.parts.length === 0
+      ) {
+        throw new Error(
+          `Format candidate không đúng: ${JSON.stringify(candidate)}`
+        );
+      }
+
+      const botReply = candidate.content.parts[0].text;
+
+      // Hiển thị phản hồi của bot
+      const botMessage = document.createElement("div");
+      botMessage.className = "message bot";
+      botMessage.textContent = botReply;
+      chatBody.appendChild(botMessage);
+
+      // Cuộn xuống cuối
+      chatBody.scrollTop = chatBody.scrollHeight;
+    } catch (error) {
+      const errorMessage = document.createElement("div");
+      errorMessage.className = "message bot";
+
+      // Fallback response nếu API lỗi
+      const fallbackResponse = `Xin lỗi, tôi đang gặp sự cố kỹ thuật. Tuy nhiên, tôi vẫn có thể giúp bạn:
+
+  - Học từ vựng cơ bản: Hello, Goodbye, Thank you
+  - Ngữ pháp đơn giản: I am, You are, He/She is
+  - Câu giao tiếp: How are you? What's your name?
+
+  Bạn có thể thử lại sau hoặc liên hệ admin để được hỗ trợ.`;
+
+      errorMessage.textContent = fallbackResponse;
+      chatBody.appendChild(errorMessage);
+      console.error("Chatbot API Error:", error);
+    }
+  }
+
+  // Gửi tin nhắn khi nhấn Enter
+  document.getElementById("user-input").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
+
+  // ====== Helpers: hiển thị và tích hợp API kết quả bài test ======
+  function appendBotMessage(text) {
+    const chatBody = document.getElementById("chatbot-body");
+    const botMessage = document.createElement("div");
+    botMessage.className = "message bot";
+    botMessage.textContent = text;
+    chatBody.appendChild(botMessage);
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Tự động mở cửa sổ chatbot khi có tin nhắn tư vấn
+    const container = document.querySelector(".chatbot-container");
+    if (!container.classList.contains("active")) {
+      container.classList.add("active");
+    }
+  }
+
+  function appendBotHTML(html) {
+    const chatBody = document.getElementById("chatbot-body");
+    const botMessage = document.createElement("div");
+    botMessage.className = "message bot";
+    botMessage.innerHTML = html;
+    chatBody.appendChild(botMessage);
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    const container = document.querySelector(".chatbot-container");
+    if (!container.classList.contains("active")) {
+      container.classList.add("active");
+    }
+  }
+
+  // Gọi khi người dùng hoàn thành bài test ở frontend của bạn
+  // Ví dụ: postTestResult(72, 'Kết quả phần Vocabulary đúng 18/25')
+  async function postTestResult(score, details = "") {
+    try {
+      console.log("Gửi kết quả test:", { score, details });
+
+      const res = await fetch("/api/test-result", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ score, details }),
+      });
+
+      console.log("Response status:", res.status);
+
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("API Error:", errorText);
+        appendBotMessage(`Gửi điểm thất bại (${res.status}): ${errorText}`);
+        return;
+      }
+
+      const data = await res.json();
+      console.log("API Response:", data);
+
+      if (data.target_url && data.target_label) {
+        appendBotHTML(
+          `Kết quả của bạn: <b>${data.score}</b>%<br/>` +
+            `Trình độ gợi ý: <b>${data.level}</b><br/>` +
+            `Hướng dẫn học: ${data.recommendation}<br/>` +
+            `<a href="${data.target_url}" class="chatbot-link-btn">${data.target_label}</a>`
+        );
+      } else {
+        appendBotMessage(
+          `Kết quả của bạn: ${data.score}.\nTrình độ gợi ý: ${data.level}.\nHướng dẫn học: ${data.recommendation}`
+        );
+      }
+    } catch (err) {
+      console.error("Test result error:", err);
+      appendBotMessage(
+        `Có lỗi xảy ra khi gửi kết quả bài test: ${err.message}`
+      );
+    }
+  }
+
+  // Tự động lấy khuyến nghị gần nhất khi mở chatbot
+  async function fetchLatestRecommendation() {
+    try {
+      const res = await fetch("/api/recommendation");
+      if (!res.ok) return; // không có dữ liệu thì bỏ qua
+      const data = await res.json();
+      if (data.target_url && data.target_label) {
+        appendBotHTML(
+          `Khuyến nghị gần nhất của bạn: <b>${data.level}</b><br/>` +
+            `Gợi ý học: ${data.recommendation}<br/>` +
+            `<a href="${data.target_url}" class="chatbot-link-btn">${data.target_label}</a>`
+        );
+      } else {
+        appendBotMessage(
+          `Khuyến nghị gần nhất của bạn: ${data.level}.\nGợi ý học: ${data.recommendation}`
+        );
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+</script>
+
+<!-- ====== Placement Test (đánh giá trình độ) ở cuối trang ====== -->
+<!-- Removed duplicate placement test block (kept the one before footer) -->
+
+<script>
+  (function () {
+    // 10 câu hỏi trộn kỹ năng cơ bản
+    const questions = [
+      {
+        q: "Chọn câu chào hỏi đúng:",
+        opts: ["Nice meet you", "Nice to meet you", "You nice to meet"],
+        correct: 1,
+      },
+      {
+        q: "Từ nào là danh từ chỉ đồ vật?",
+        opts: ["Run", "Table", "Quickly"],
+        correct: 1,
+      },
+      {
+        q: "Chọn thì hiện tại đơn đúng:",
+        opts: ["He go to school", "He goes to school", "He going to school"],
+        correct: 1,
+      },
+      {
+        q: "Tính từ của 'success' là:",
+        opts: ["successful", "successfully", "successes"],
+        correct: 0,
+      },
+      {
+        q: "Dạng đúng của động từ: 'She ____ English every day.'",
+        opts: ["study", "studies", "studied"],
+        correct: 1,
+      },
+      {
+        q: "Từ đồng nghĩa gần với 'happy':",
+        opts: ["sad", "glad", "angry"],
+        correct: 1,
+      },
+      {
+        q: "Điền mạo từ đúng: 'I have ____ apple.'",
+        opts: ["a", "an", "the"],
+        correct: 1,
+      },
+      {
+        q: "Câu hỏi đúng ngữ pháp:",
+        opts: [
+          "What time you get up?",
+          "What time do you get up?",
+          "You get up what time?",
+        ],
+        correct: 1,
+      },
+      {
+        q: "'children' là số nhiều của:",
+        opts: ["child", "chill", "chile"],
+        correct: 0,
+      },
+      {
+        q: "Chọn giới từ đúng: 'I am interested ____ music.'",
+        opts: ["on", "in", "at"],
+        correct: 1,
+      },
+    ];
+
+    const introEl = document.getElementById("placement-intro");
+    const quizEl = document.getElementById("placement-quiz");
+    const progressEl = document.getElementById("placement-progress");
+    const questionEl = document.getElementById("placement-question");
+    const optionsEl = document.getElementById("placement-options");
+    const nextBtn = document.getElementById("placement-next");
+    const submitBtn = document.getElementById("placement-submit");
+    const errorEl = document.getElementById("placement-error");
+    const resultEl = document.getElementById("placement-result");
+
+    let index = 0;
+    let score = 0;
+    const answers = [];
+
+    function renderQuestion() {
+      errorEl.style.display = "none";
+      const current = questions[index];
+      progressEl.textContent = `Câu ${index + 1} / ${questions.length}`;
+      questionEl.textContent = current.q;
+      optionsEl.innerHTML = "";
+      current.opts.forEach((opt, i) => {
+        const id = `opt-${index}-${i}`;
+        const label = document.createElement("label");
+        label.style.display = "flex";
+        label.style.gap = "8px";
+        label.style.alignItems = "center";
+        label.innerHTML = `<input type="radio" name="q-${index}" value="${i}" id="${id}" /> <span>${opt}</span>`;
+        optionsEl.appendChild(label);
+      });
+
+      // Toggle nút
+      const isLast = index === questions.length - 1;
+      nextBtn.style.display = isLast ? "none" : "inline-block";
+      submitBtn.style.display = isLast ? "inline-block" : "none";
+    }
+
+    function getSelectedIndex() {
+      const radios = optionsEl.querySelectorAll('input[type="radio"]');
+      for (const r of radios) {
+        if (r.checked) return parseInt(r.value, 10);
+      }
+      return null;
+    }
+
+    function onAnswer(nextStep) {
+      const sel = getSelectedIndex();
+      if (sel === null) {
+        errorEl.style.display = "block";
+        return;
+      }
+      answers[index] = sel;
+      if (sel === questions[index].correct) score += 1;
+      nextStep();
+    }
+
+    function showResult() {
+      quizEl.style.display = "none";
+      const pct = Math.round((score / questions.length) * 100);
+      resultEl.style.display = "block";
+      resultEl.innerHTML = `<h3>Kết quả của bạn: ${score}/${questions.length} (${pct}%)</h3><p>Chatbot đang tư vấn lộ trình dựa trên kết quả của bạn...</p>`;
+
+      // Gửi về server để lưu + sinh khuyến nghị, chatbot sẽ hiển thị phản hồi
+      if (typeof postTestResult === "function") {
+        postTestResult(
+          pct,
+          `Placement Test: đúng ${score}/${questions.length}`
+        );
+      }
+    }
+
+    document.getElementById("placement-start").addEventListener("click", () => {
+      introEl.style.display = "none";
+      quizEl.style.display = "block";
+      index = 0;
+      score = 0;
+      answers.length = 0;
+      renderQuestion();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      onAnswer(() => {
+        index += 1;
+        renderQuestion();
+      });
+    });
+
+    submitBtn.addEventListener("click", () => {
+      onAnswer(() => {
+        showResult();
+      });
+    });
+  })();
+</script>

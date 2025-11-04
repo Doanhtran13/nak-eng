@@ -1,0 +1,126 @@
+body {
+  font-family: "Poppins", sans-serifs;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0; /* Xóa margin mặc định */
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.login-container {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.input {
+  margin-top: 20px;
+}
+button {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 999px;
+  background-color: black;
+  color: white;
+  border: solid black 1px;
+}
+h2 {
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+label {
+  display: inline-block;
+  width: 82.5px;
+  height: 23px;
+  margin-right: 5px;
+}
+h1 {
+  margin-right: 100px;
+  font-family: "Honk";
+  font-size: 70px;
+}
+/* hỗ trợ mobile */
+@media (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header {
+    position: static; /* Tránh lỗi menu bị đè */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Menu hiển thị theo cột */
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .signin {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .banner,
+  .box img,
+  .media-block img {
+    width: 100%;
+    height: auto;
+  }
+
+  .boxtienganh,
+  .boxtienganh2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .child-eng,
+  .AldultEnglish {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .childright img,
+  .adultleft img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer .infor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .infor div {
+    margin: 10px 0;
+  }
+}

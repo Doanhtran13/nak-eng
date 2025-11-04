@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAK ENGLISH</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #d9afd9;
+        background-image: linear-gradient(
+          0deg,
+          rgb(231, 223, 231) 0%,
+          rgb(177, 226, 231) 100%
+        );
+      }
+
+      .a {
+        text-decoration: none;
+      }
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 90px; /* tăng chiều cao */
+        background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+        backdrop-filter: blur(10px);
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar-brand {
+        font-family: "Press Start 2P", cursive;
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px; /* khoảng cách giữa các mục menu */
+        margin: 0;
+      }
+
+      .navbar-nav .nav-link {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .navbar-nav .nav-link {
+        position: relative;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 0;
+        transition: color 0.4s ease;
+      }
+
+      .navbar-nav .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #00c9ff, #92fe9d);
+        transition: all 0.4s ease;
+        z-index: -1;
+      }
+
+      .navbar-nav .nav-link:hover::before {
+        left: 0;
+      }
+
+      .navbar-nav .nav-link {
+        position: relative;
+        display: inline-block; /* QUAN TRỌNG để gạch nằm đúng */
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 8px 16px;
+        padding-bottom: 6px; /* tạo khoảng cách dưới */
+        transition: color 0.3s ease;
+        overflow: hidden;
+      }
+
+      .navbar-nav .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0; /* sát mép dưới nav-link */
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(to right, green, blue);
+        transform: translateX(0%);
+        transition: width 0.4s ease;
+        border-radius: 5px;
+      }
+
+      .navbar-nav .nav-link:hover::before {
+        width: 100%;
+      }
+
+      .auth-buttons .btn {
+        background-color: black;
+        color: white;
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-weight: bold;
+      }
+
+      .auth-buttons .btn:hover {
+        background-color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          height: auto;
+          padding: 10px 20px;
+        }
+
+        .navbar-nav {
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .auth-buttons {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FULL-WIDTH NAVBAR -->
+    <nav class="navbar">
+      <!-- Logo -->
+      <a
+        class="navbar-brand"
+        style="font-family: Honk, sans-serif; font-size: 40px"
+        href="/"
+      >
+        NAK ENGLISH
+      </a>
+
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Children_English">Tiếng Anh trẻ em</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Adult_English">Tiếng Anh người lớn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ielts exam</a>
+        </li>
+      </ul>
+
+      <!-- Đăng ký / Đăng nhập -->
+      <div class="auth-buttons d-flex">
+        <span class="btn btn-success" style="border-radius: 30px; padding: 10px 20px; font-weight: bold; margin-right: 10px;">
+          Hello {{ request.user }}
+        </span>
+        
+        <a href="./register" class="btn mr-2">Register</a>
+        <a href="./login" class="btn">Log in</a>
+        <a href="./logout" class="btn" style="margin-left: 10px">Log out</a>
+      </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

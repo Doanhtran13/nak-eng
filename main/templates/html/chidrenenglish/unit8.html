@@ -1,0 +1,1160 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <link href="{% static 'css/childrenenglish/unit1.css' %}" rel="stylesheet" />
+  {% include 'views/header.html' %}
+  <body>
+    {% include 'views/navbar.html' %}
+    <!-- banner -->
+    <div class="container">
+      <img
+        src="{%static 'img/img/bannerr2.png' %}"
+        class="img-fluid banner1"
+        alt="..."
+      />
+      <img
+        src="{%static 'img/img/bannerr3.png' %}"
+        class="img-fluid banner2"
+        alt="..."
+      />
+    </div>
+    <!-- phan main -->
+    <div class="container my-4">
+      <!-- Section 1: Hello -->
+      <div class="container mt-5">
+        <!-- Thanh phân chia -->
+        <div
+          class="d-flex justify-content-between align-items-center"
+          style="margin-bottom: 20px"
+        >
+          <div class="border-top border-danger" style="width: 45%"></div>
+          <h3 class="text-center text-danger" style="font-weight: bold">
+            Unit 8: What do you do in break time ?
+          </h3>
+          <div class="border-top border-danger" style="width: 45%"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingHello">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHello"
+              aria-expanded="true"
+              aria-controls="collapseHello"
+            >
+              Part 1: Vocabulary
+            </button>
+          </h3>
+        </div>
+        <div id="collapseHello" class="collapse" aria-labelledby="headingHello">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="false"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{%static 'img/img/u81.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 1"
+                  style="max-height: 706px"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio1').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio1"
+                    src="{%static 'audio/playwithpet.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u82.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 2"
+                  style="max-height: 706px"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio2').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio2"
+                    src="{%static 'audio/playvolleyball.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u83.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio3').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio3"
+                    src="{%static 'audio/playtennis.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u84.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio4').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio4"
+                    src="{%static 'audio/talktofriend.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u85.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio5').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio5"
+                    src="{%static 'audio/listentomusic.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u86.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio6').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio6"
+                    src="{%static 'audio/readbooks.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u87.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio7').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio7"
+                    src="{%static 'audio/draw.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u88.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio8').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio8"
+                    src="{%static 'audio/watchtv.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u89.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio9').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio9"
+                    src="{%static 'audio/playgames.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u810.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio10').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio10"
+                    src="{%static 'audio/playchess.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u811.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio11').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio11"
+                    src="{%static 'audio/go for a walk.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u812.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio12').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio12"
+                    src="{%static 'audio/takeanap.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u813.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio13').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio13"
+                    src="{%static 'audio/practicesports.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{%static 'img/img/u814.jpg' %}"
+                  class="d-block w-100"
+                  alt="Image 3"
+                />
+                <div class="audio-container">
+                  <button
+                    class="audio-btn"
+                    onclick="document.getElementById('audio14').play()"
+                  >
+                    🎧
+                  </button>
+                  <audio
+                    id="audio14"
+                    src="{%static 'audio/play football.mp3' %}"
+                    preload="auto"
+                  ></audio>
+                </div>
+              </div>
+            </div>
+            <!-- Các nút điều hướng -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Grammar -->
+      <div class="card mt-3">
+        <div class="card-header" id="headingGrammar">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseGrammar"
+              aria-expanded="true"
+              aria-controls="collapseGrammar"
+            >
+              Part 2: Grammar
+            </button>
+          </h3>
+        </div>
+        <div
+          id="collapseGrammar"
+          class="collapse"
+          aria-labelledby="headingGrammar"
+        >
+          <div class="card mb-3" style="margin: 15px; border: 2px solid black">
+            <img
+              src="{%static 'img/img/u8grammar.png' %}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="card-body1">
+                <h5 class="card-title" style="text-align: start">
+                  What do you do in your break-time ?
+                </h5>
+              </div>
+              <style>
+                p {
+                  font-family: "Roboto", sans-serif;
+                }
+              </style>
+              <p>
+                <strong>1. Khi nào dùng thì hiện tại đơn?</strong> <br />
+                - Thói quen: Những hành động xảy ra thường xuyên, theo thói quen
+                hàng ngày. <br />
+                Ví dụ: I go to school every day. <br />
+                - Sự thật hiển nhiên: Những điều luôn đúng, không thay đổi.
+                <br />
+                Ví dụ: The sun rises in the east. <br />
+                - Hành động trong lịch trình: Những sự kiện xảy ra theo một lịch
+                trình cụ thể. <br />
+                Ví dụ: The class starts at 8 AM. <br />
+                <strong>2. Cấu trúc câu trong thì hiện tại đơn:</strong> <br />
+                - Câu khẳng định: <br />
+                Cấu trúc: Subject + verb (base form) <br />
+                Ví dụ: I play football. <br />
+                Ví dụ: He reads books. <br />
+                - Câu hỏi: <br />
+                Cấu trúc: What + do/does + subject + verb (base form)? <br />
+                Ví dụ: What do you do at break time? <br />
+                Ví dụ: Does she play basketball? <br />
+                - Câu phủ định: <br />
+                Cấu trúc: Subject + do/does + not + verb (base form) <br />
+                Ví dụ: I do not (don’t) play football. <br />
+                Ví dụ: He does not (doesn't) eat vegetables. <br />
+                <strong>3. Lưu ý về "do" và "does":</strong> <br />
+                - Do dùng cho các chủ ngữ I, you, we, they. <br />
+                Ví dụ: I do my homework every day. <br />
+                - Does dùng cho các chủ ngữ he, she, it. <br />
+                Ví dụ: She does her homework in the evening. <br />
+                <strong>4. Từ để hỏi trong thì hiện tại đơn:</strong> <br />
+                - What – để hỏi về hành động hoặc sự vật. <br />
+                Ví dụ: What do you do at break time? <br />
+                - When – để hỏi về thời gian. <br />
+                Ví dụ: When do you have lunch? <br />
+                - Where – để hỏi về địa điểm. <br />
+                Ví dụ: Where does she go after school? <br />
+                - Why – để hỏi lý do. <br />
+                Ví dụ: Why do you play football? <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Minigame -->
+      <div class="card mt-3">
+        <div class="card-header" id="headinggame">
+          <h3 class="mb-0">
+            <button
+              style="
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-link"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsegame"
+              aria-expanded="true"
+              aria-controls="collapsegame"
+            >
+              Part 3: Game
+            </button>
+          </h3>
+        </div>
+        <div
+          id="collapsegame"
+          class="collapse show"
+          aria-labelledby="headinggame"
+        >
+          <div
+            id="quiz-wrapper"
+            style="
+              background: linear-gradient(135deg, #f6d365, #fda085);
+              padding: 40px;
+              border-radius: 15px;
+              width: 100%;
+              min-height: 500px;
+              font-family: 'Poppins', sans-serif;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('https://img.freepik.com/free-vector/education-background-with-stationary-items_1308-102929.jpg')
+                  no-repeat center center;
+                background-size: cover;
+                opacity: 0.2;
+              "
+            ></div>
+            <div
+              id="quiz-container"
+              style="
+                background: white;
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+                max-width: 650px;
+                width: 100%;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                position: relative;
+                z-index: 1;
+              "
+            ></div>
+          </div>
+
+          <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+            #quiz-container h2 {
+              font-size: 30px;
+              color: #2c3e50;
+              margin-bottom: 20px;
+              text-align: center;
+              font-weight: 700;
+            }
+
+            #quiz-container p {
+              font-size: 16px;
+              color: #7f8c8d;
+              text-align: center;
+              margin-bottom: 20px;
+            }
+
+            .option-btn {
+              width: 100%;
+              padding: 14px;
+              margin: 10px 0;
+              border: none;
+              border-radius: 10px;
+              background: linear-gradient(135deg, #dfe9f3, #ffffff);
+              font-size: 16px;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              font-family: "Poppins", sans-serif;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            }
+
+            .option-btn:hover {
+              background: linear-gradient(135deg, #74ebd5, #acb6e5);
+              transform: translateY(-3px);
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .option-btn:active {
+              transform: translateY(0);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            }
+
+            .option-btn:disabled {
+              cursor: not-allowed;
+              opacity: 0.7;
+            }
+
+            .progress-bar {
+              width: 100%;
+              height: 12px;
+              background: #ecf0f1;
+              border-radius: 6px;
+              margin-bottom: 25px;
+              overflow: hidden;
+            }
+
+            .progress {
+              height: 100%;
+              background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+              transition: width 0.5s ease;
+            }
+
+            .action-btn {
+              padding: 12px 30px;
+              font-size: 16px;
+              font-weight: 600;
+              border: none;
+              border-radius: 10px;
+              background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+              color: white;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              font-family: "Poppins", sans-serif;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              margin: 0 auto;
+            }
+
+            .action-btn:hover {
+              background: linear-gradient(90deg, #fc5c7d, #6a82fb);
+              transform: translateY(-3px);
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .action-btn:active {
+              transform: translateY(0);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            #result {
+              margin-top: 15px;
+              font-weight: 600;
+              text-align: center;
+              font-family: "Poppins", sans-serif;
+              font-size: 16px;
+            }
+
+            .timer {
+              margin-top: 15px;
+              text-align: center;
+              font-size: 16px;
+              color: #2c3e50;
+              font-family: "Poppins", sans-serif;
+              font-weight: 600;
+            }
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: scale(0.95);
+              }
+              to {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+
+            #quiz-container {
+              animation: fadeIn 0.5s ease forwards;
+            }
+          </style>
+
+          <script>
+            const questions = [
+              {
+                question: "1. Chơi là gì ?",
+                options: ["Play", "Sleep", "Eat", "Active"],
+                correct: 0,
+              },
+              {
+                question: "2. Đá bóng là gì?",
+                options: ["Football", "Ball", "Eat", "Chat"],
+                correct: 0,
+              },
+              {
+                question: "3. Vẽ là gì?",
+                options: ["Eat", "Cook", "Draw", "Cake"],
+                correct: 2,
+              },
+              {
+                question: "4. Xem TV là gì?",
+                options: ["Dog", "Deer", "Watch TV", "Doll"],
+                correct: 2,
+              },
+              {
+                question: "5. Chơi game là gì?",
+                options: ["Play games", "Fog", "Finger", "Fake"],
+                correct: 0,
+              },
+            ];
+
+            let current = 0,
+              score = 0,
+              timer = null;
+            const container = document.getElementById("quiz-container");
+
+            // Âm thanh
+            const correctSound = new Audio(
+              "https://www.soundjay.com/buttons/beep-01a.mp3"
+            );
+            const wrongSound = new Audio(
+              "https://www.soundjay.com/buttons/beep-02.mp3"
+            );
+
+            function showStartPage() {
+              container.innerHTML = `
+                        <div>
+                            <h2>📚 Trò chơi Quiz Tiếng Anh</h2>
+                            <p>Trả lời ${questions.length} câu hỏi để kiểm tra từ vựng của bạn!</p>
+                            <button class="action-btn" onclick="loadQuestion()">
+                                <span>🎮</span> Bắt đầu
+                            </button>
+                        </div>
+                    `;
+            }
+
+            function loadQuestion() {
+              if (current >= questions.length) {
+                container.innerHTML = `
+                            <div>
+                                <h2>🏆 Bạn đã hoàn thành!</h2>
+                                <p>Điểm số: <strong>${score} / ${questions.length}</strong></p>
+                                <button class="action-btn" onclick="resetGame()">
+                                    <span>🔄</span> Chơi lại
+                                </button>
+                            </div>
+                        `;
+                return;
+              }
+
+              const q = questions[current];
+              const progressPercent = (current / questions.length) * 100;
+              container.innerHTML = `
+                        <div class="progress-bar">
+                            <div class="progress" style="width: ${progressPercent}%"></div>
+                        </div>
+                        <div style="margin-bottom: 15px;"><strong>Câu ${
+                          current + 1
+                        }/${questions.length}:</strong> ${q.question}</div>
+                        <div id="options">
+                            ${q.options
+                              .map(
+                                (opt, i) => `
+                                <button class="option-btn" onclick="checkAnswer(${i})">
+                                    <span>🔹</span> ${opt}
+                                </button>
+                            `
+                              )
+                              .join("")}
+                        </div>
+                        <div id="result"></div>
+                        <div class="timer">⏳ Thời gian còn lại: <span id="timer" style="color:#fc5c7d;font-weight:600;">30</span> giây</div>
+                    `;
+
+              let timeLeft = 30;
+              document.getElementById("timer").textContent = timeLeft;
+              timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = timeLeft;
+                if (timeLeft === 0) {
+                  clearInterval(timer);
+                  showResult(false, q.correct);
+                }
+              }, 1000);
+            }
+
+            function checkAnswer(selected) {
+              clearInterval(timer);
+              const q = questions[current];
+              const isCorrect = selected === q.correct;
+              if (isCorrect) {
+                score++;
+                correctSound.play();
+              } else {
+                wrongSound.play();
+              }
+              showResult(isCorrect, q.correct);
+            }
+
+            function showResult(isCorrect, correctIndex) {
+              const resultDiv = document.getElementById("result");
+              resultDiv.textContent = isCorrect
+                ? "✅ Đúng rồi! Giỏi lắm!"
+                : `❌ Sai rồi! Đáp án đúng: ${questions[current].options[correctIndex]}`;
+              resultDiv.style.color = isCorrect ? "#27ae60" : "#fc5c7d";
+
+              const buttons = document.querySelectorAll(".option-btn");
+              buttons.forEach((btn, index) => {
+                btn.disabled = true;
+                btn.style.background =
+                  index === correctIndex
+                    ? "linear-gradient(135deg, #a8e063, #56ab2f)"
+                    : "linear-gradient(135deg, #ff9a9e, #fad0c4)";
+              });
+
+              setTimeout(() => {
+                container.style.opacity = "0";
+                setTimeout(() => {
+                  current++;
+                  container.style.opacity = "1";
+                  loadQuestion();
+                }, 300);
+              }, 2500);
+            }
+
+            function resetGame() {
+              current = 0;
+              score = 0;
+              container.style.opacity = "0";
+              setTimeout(() => {
+                container.style.opacity = "1";
+                showStartPage();
+              }, 300);
+            }
+
+            showStartPage();
+          </script>
+        </div>
+      </div>
+      <a href="/Children_English1"
+        ><button
+          type="button"
+          class="btn btn-outline-dark"
+          style="
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+            font-family: 'Roboto', sans-serif;
+          "
+        >
+          <strong>Quay lại danh sách bài học</strong>
+        </button></a
+      >
+    </div>
+
+    <!-- Link to Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showContent(id) {
+        // Hide all content divs
+        const contentDivs = document.querySelectorAll(".hidden");
+        contentDivs.forEach((div) => div.classList.remove("active"));
+
+        // Show the clicked content
+        const selectedDiv = document.getElementById(id);
+        selectedDiv.classList.add("active");
+      }
+    </script>
+    <script>
+      function playSound(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play(); // Play the audio when the button is clicked
+      }
+    </script>
+    {% include 'views/footer.html' %}
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f7fa;
+  }
+
+  /* Container cho chatbot */
+  .chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+  }
+
+  /* Nút chatbot */
+  .chatbot-button {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 28px;
+    animation: pulse 2s infinite;
+  }
+
+  .chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Hiệu ứng pulse */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(234, 116, 225, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+
+  /* Khung chat */
+  .chatbot-window {
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    overflow: hidden;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .chatbot-container.active .chatbot-window {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Header khung chat */
+  .chatbot-header {
+    font-family: "Honk", sans-serif;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  /* Nội dung khung chat */
+  .chatbot-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Tin nhắn */
+  .message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 75%;
+    line-height: 1.4;
+    animation: slideIn 0.3s ease;
+    white-space: pre-wrap; /* Hỗ trợ xuống dòng */
+  }
+
+  .message.user {
+    background: pink;
+    color: black;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+  }
+
+  .message.bot {
+    background: #e9ecef;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+  }
+
+  /* Hiệu ứng tin nhắn xuất hiện */
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Footer chứa input */
+  .chatbot-footer {
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .chatbot-footer input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+
+  .chatbot-footer input:focus {
+    border-color: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-footer button {
+    padding: 12px;
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+
+  .chatbot-footer button:hover {
+    background: linear-gradient(to right, rgb(143, 227, 161), #3498db);
+  }
+
+  .chatbot-button img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .chatbot-window {
+      width: 90vw;
+      height: 80vh;
+      bottom: 80px;
+      right: 10px;
+    }
+
+    .chatbot-button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+  }
+</style>
+<div class="chatbot-container">
+  <div class="chatbot-button">
+    <img
+      src="{% static 'img/img/479374583_2408177479537942_8679824344704556172_n (1).png' %}"
+      alt="logooo"
+      class="loggonak"
+      style=""
+    />
+  </div>
+  <div class="chatbot-window">
+    <div class="chatbot-header">NAK ENGLISH</div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="message bot" style="white-space: normal">
+        <strong>Xin chào! Cùng học tập với NAK ENGLISH nhé 🙂</strong>
+      </div>
+    </div>
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Nhập câu hoặc câu hỏi..."
+      />
+      <button onclick="sendMessage()">📤</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_KEY = "AIzaSyDoBLRfWtl8RgD9bP_0YLocv1Ek-joFt1o";
+  const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+  const SYSTEM_PROMPT =
+    "Bạn là một giáo viên tiếng Anh chuyên nghiệp. Nhiệm vụ của bạn là giúp người dùng học tiếng Anh bằng cách giải thích từ vựng, ngữ pháp, sửa lỗi câu, cung cấp ví dụ và trả lời các câu hỏi liên quan đến tiếng Anh. Phản hồi của bạn phụ thuộc vào việc nếu người dùng nói tiếng việt hãy phản hồi tiếng việt và nói tiếng anh khi người dùng nói tiếng anh, không chấp nhận các ngôn ngữ khác, dễ hiểu và thân thiện. Mỗi ý chính hoặc bước giải thích phải được trình bày trên một dòng mới, sử dụng gạch đầu dòng ('-') hoặc xuống dòng để đảm bảo rõ ràng và dễ đọc.";
+
+  document.querySelector(".chatbot-button").addEventListener("click", () => {
+    document.querySelector(".chatbot-container").classList.toggle("active");
+  });
+
+  async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Hiển thị tin nhắn người dùng
+    const chatBody = document.getElementById("chatbot-body");
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.textContent = message;
+    chatBody.appendChild(userMessage);
+    input.value = "";
+
+    // Cuộn xuống cuối
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    try {
+      // Gửi yêu cầu đến Gemini API
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: SYSTEM_PROMPT }, { text: message }],
+            },
+          ],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Lỗi khi gọi Gemini API");
+      }
+
+      const data = await response.json();
+      const botReply = data.candidates[0].content.parts[0].text;
+
+      // Hiển thị phản hồi của bot
+      const botMessage = document.createElement("div");
+      botMessage.className = "message bot";
+      botMessage.textContent = botReply;
+      chatBody.appendChild(botMessage);
+
+      // Cuộn xuống cuối
+      chatBody.scrollTop = chatBody.scrollHeight;
+    } catch (error) {
+      const errorMessage = document.createElement("div");
+      errorMessage.className = "message bot";
+      errorMessage.textContent = "Có lỗi xảy ra. Vui lòng thử lại!";
+      chatBody.appendChild(errorMessage);
+      console.error(error);
+    }
+  }
+
+  // Gửi tin nhắn khi nhấn Enter
+  document.getElementById("user-input").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
+</script>
