@@ -5,8 +5,9 @@ The project emphasizes a modern and user-friendly frontend, built using HTML, CS
 and engage with the chatbot in simulated dialogues. The design prioritizes clarity and simplicity to ensure an intuitive learning experience.
 
 <img width="1904" height="907" alt="Ảnh chụp màn hình 2025-11-04 182938" src="https://github.com/user-attachments/assets/08c0b04c-41db-46ec-9b95-56e4de062ce9" />
-<img width="1901" height="899" alt="Ảnh chụp màn hình 2025-11-04 182946" src="https://github.com/user-attachments/assets/4d48ea86-308c-48dc-b9d6-a7e8e63404ca" />
-<img width="1902" height="911" alt="Ảnh chụp màn hình 2025-11-04 182956" src="https://github.com/user-attachments/assets/734c61c0-d91e-4e87-8fcc-174d60a9681f" />
+<img width="1905" height="905" alt="Ảnh chụp màn hình 2025-11-04 183237" src="https://github.com/user-attachments/assets/8d001463-bc0b-4ed7-89d3-dc953b8d42ad" />
+<img width="1903" height="900" alt="Ảnh chụp màn hình 2025-11-04 183246" src="https://github.com/user-attachments/assets/a207f03f-a6d1-4016-bac9-50c30acb70a6" />
+
 
 I was responsible for designing the UI, implementing interactive components, and integrating the chatbot via API, ensuring seamless communication between frontend and backend. 
 This project demonstrates my ability to create engaging frontend experiences while connecting to AI-powered services.
