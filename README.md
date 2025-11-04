@@ -15,18 +15,11 @@ I was responsible for designing the UI, implementing interactive components, and
 This project demonstrates my ability to create engaging frontend experiences while connecting to AI-powered services.
 
 How to Run the Django Backend
-
 The backend of this project is built with Django to manage lessons, user progress, and chatbot interactions. Follow these steps to run the project locally:
-Clone the repository:
-git clone https://github.com/Doanhtran13/nak-eng.git
-
+Clone the repository: git clone https://github.com/Doanhtran13/nak-eng.git
 Set up a virtual environment:
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
-
-Apply migrations:
-python manage.py migrate
-
-Run the development server:
-python manage.py runserver
+Apply migrations: python manage.py migrate
+Run the development server: python manage.py runserver
